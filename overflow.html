@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            /* after setting the height, the text overlaps */
+            border: 3px solid steelblue;
+            /* overflow-y: scroll; */
+            /* applies scroll  in y direction*/
+            overflow-y: auto;
+            /* apply overflow when necessary */
+        }
+        /* #box-1{
+            overflow: scroll;
+            overflow-x: hidden;
+             to remove the scroll in x direction 
+        } */
+         .ellipsis{
+            width: 200px;
+            /* Text will go to next line or break (wrap) after 200px by default*/
+            white-space: nowrap;
+            border: 2px solid steelblue;
+            /* Text takes a large space. */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            /* gives some dots. shows that there are more text*/
+            text-overflow: clip;
+            /* will not show any dots */
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <p title="I am a serious learner.I am investing at least 6-8 hrs every day.No gap at all." class="ellipsis">I am a serious learner.I am investing at least 6-8 hrs every day.No gap at all.</p>
+        <!-- if we put cursor on paragraph,it will show the full text because we used title -->
+    </header>
+    <section>
+        <div class="box" id="box-1">
+            <h3>My Text Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error deserunt architecto repellat veniam necessitatibus, exercitationem consequatur aut quae non voluptatibus ab magni autem recusandae ipsa? Ipsam, laborum? Exercitationem, ad repellendus suscipit dignissimos in ratione doloremque consequuntur odit illo veniam sunt molestias magnam sequi incidunt deleniti hic aut accusamus. Quidem saepe aut est temporibus magni deserunt, exercitationem soluta, sequi dolores repellat iure adipisci quasi, ipsam similique! Recusandae, tempore? Ducimus assumenda natus modi error, totam molestiae quas aliquid iusto et incidunt excepturi unde distinctio dolor impedit necessitatibus cumque? Consectetur voluptas excepturi quasi tempora qui rem magni, eius perferendis consequuntur maiores neque sint doloremque debitis nesciunt illum blanditiis nobis perspiciatis omnis, amet, commodi voluptatem inventore? Vitae voluptatem libero excepturi labore dolorem sapiente eius, suscipit reiciendis, quia corporis corrupti id iusto aut nam a, incidunt quam eum? Voluptate non nihil, aperiam dicta, quo inventore culpa, quaerat qui doloremque officiis sit maxime necessitatibus dignissimos et explicabo. Magnam officiis odio optio alias suscipit possimus aliquam deleniti vitae est similique quasi nisi, sequi nulla. Rerum fugiat animi, aperiam dolorum magnam corrupti molestiae illum exercitationem reprehenderit mollitia veritatis odio perspiciatis quae modi minus ut repellendus at ipsum eum eveniet, quam nulla atque ipsa. Molestiae vero enim deleniti doloribus!</p>
+        </div>
+        <div class="box">
+            <h3>My Text Box 2</h3>
+            <p>Dolore nobis ipsa odio, ex vitae dignissimos iste vel facilis dicta nulla doloremque incidunt ullam officia rerum, veritatis quod quo minima delectus, illo eum hic quisquam. Quia commodi distinctio qui corrupti, facilis accusamus, sed, adipisci atque consectetur explicabo pariatur tempora consequatur quaerat quod repellendus ad eligendi error ratione expedita ex incidunt ut beatae est? Perferendis architecto repellendus dolore nostrum omnis quidem ullam sint. Aliquam sint fugit pariatur quae odit sapiente ratione omnis doloribus numquam sequi? Aut qui ipsum odio ad beatae, est in, at tenetur libero itaque consectetur laborum. Recusandae unde officia labore aperiam repellat temporibus dolorem quaerat animi obcaecati qui ipsam excepturi esse voluptate sunt, voluptates minus magni in dicta optio. Tempora, quaerat dolorum ratione vero odit rem earum odio quis, ipsa, saepe inventore sed cumque dolore quia. Vero voluptatem itaque commodi atque rem optio ducimus cupiditate praesentium ea corrupti voluptas ad necessitatibus omnis aspernatur a aperiam quas provident, quod, officia repellat sint repellendus laboriosam asperiores odio! Consequatur repellendus sit aspernatur labore quos, officia, similique maiores unde, facilis veniam officiis consectetur qui commodi dicta praesentium dolorem nihil voluptas. Nemo, illo. Vero excepturi delectus nisi! Esse quidem adipisci quisquam distinctio eligendi asperiores praesentium? Suscipit doloribus tempore animi dignissimos eligendi? Ab?</p>
+        </div>
+        <div class="box">
+            <h3>My Text Box 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque est ratione delectus expedita mollitia molestias facere nulla voluptatibus dolore dolor.</p>
+        </div>
+    </section>
+</body>
+</html>
+<!-- Overflow: not a part of css3 -->
