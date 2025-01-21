@@ -1,0 +1,59 @@
+<!-- 11-8 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+</head>
+<style>
+    :root{
+        /* custom property starts with --. Name has to be meaningful*/
+        --primary-color: steelblue;
+        --secondary-color:blue;
+        font-size: 20px;
+    }
+    h1{
+        color: var(--primary-color);
+    }
+    h5{
+        background-color: var(--primary-color);
+    }
+    .box{
+        border: 2px solid var(--secondary-color);
+        width: calc(100% - 300px);
+        /* removing 300px from 100% */
+    }
+    .box p{
+        color: var(--primary-color);
+        font-size: var(--font-size);
+    }
+    /* if we want to replace the colors (same) that is set on multiple files and elements,it is a tough job
+    We use custom properties for that using :root */
+    .Sidebar{
+        background-color: lightgray;
+    }
+    .content{
+        background-color: lightblue;
+    }
+    .container{
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 500px;
+        grid-template-columns: 200px calc(100% - 200px - 20px);
+        /* grid-template-columns: 200px calc(100% - 200px) :It will result in a gap and scroll bar.-20px  removes them*/
+    }
+</style>
+<body>
+    <h1>My Custom Properties</h1>
+    <h5>Also commonly known as CSS Variables</h5>
+    <div class="box">
+        <h3>I am doing something</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur illo neque, quidem ab accusamus tempore soluta non quam minima et itaque exercitationem minus magni quibusdam blanditiis repellat pariatur temporibus dignissimos.</p>
+    </div>
+    <div class="container">
+        <div class="Sidebar">Sidebar</div>
+            <div class="content">Main Content</div>
+    </div>
+</body>
+</html>
